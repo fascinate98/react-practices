@@ -1,5 +1,5 @@
 import React from "react";
-
+import FoodList from "./FoodList";
 
 const App = function(){
 
@@ -25,7 +25,9 @@ const App = function(){
 
 
   return (
-    <div>App</div>
+    <div id="App">
+    <FoodList foods = {foods}/>
+  </div>
   )
 }
 

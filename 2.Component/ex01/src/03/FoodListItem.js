@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from 'react'
 
-export default class FoodListItem extends Component {
-  //override
-  render() {
-    return (
-        <li>{this.props.name} : {this.props.quantity}</li>
-    );
-  }
+const FoodListItem = ({name, quantity}) => {
+  return (
+    <li>{name} : {quantity}</li>
+  )
 }
+
+export default FoodListItem
