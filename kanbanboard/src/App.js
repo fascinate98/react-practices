@@ -1,8 +1,23 @@
-import React from 'react'
+import React from "react";
+import CardList from "./CardList";
+import "../public/styles.css";
+import data from '../public/data.json';
 
 const App = () => {
+
   return (
-    <div>KanbanBoard</div>
-  )
-}
-export default App;
+    <div className="KanbanBoard">
+      <CardList cards={__getListFilter(data, "ToDo")} status="To Do" />
+      <CardList cards={__getListFilter(data, "Doing")} status="In Progress" />
+      <CardList cards={__getListFilter(data, "Done")} status="Done" />
+    </div>
+  );
+};
+
+const __getListFilter = (data, key) => {
+  return data.filter((card) => {
+    return card["status"] === key;
+  });
+};
+
+export default App
