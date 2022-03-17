@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
+import styles from './assets/css/TaskList.css';
+import Task from './Task';
 
-const TaskList = ({ tasks }) => {
+const TaskList = ({tasks}) => {
   return (
-    <li className="TaskList__Task">
-      <input type="checkbox" defaultChecked={tasks.done} />
-      {" " + tasks.name + " "}
-      <a href="#" className="TaskList__Task--remove"></a>
-    </li>
+    <div className={styles.TaskList}>
+        <ul>
+            {tasks.map(task => <Task
+                                    key={task.no}
+                                    name={task.name} /> )}
+        </ul>
+    </div>     
   );
-};
+}
 
-export default TaskList;
+export default TaskList

@@ -1,15 +1,19 @@
-import React from "react";
-import CardListItems from "./CardListItems";
+import React from 'react'
+import Card from './Card';
+import styles from './assets/css/CardList.css';
 
-const CardList = ({ cards, status }) => {
+const CardList = ({title, cards}) => {
+  console.log(title, cards);
   return (
-    <div className="CardList">
-      <h1>{status}</h1>
-      {cards.map((card) => (
-        <CardListItems key={card.no} card={card} />
-      ))}
+    <div className={styles.CardList}>
+        <h1>{title}</h1>
+        { cards.map(card => <Card 
+                              key={card.no}
+                              title={card.title}
+                              description={card.description}
+                              tasks={card.tasks} />) }
     </div>
-  );
-};
+  )
+}
 
 export default CardList
