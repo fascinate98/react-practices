@@ -1,17 +1,17 @@
 {
-  "name": "kanbanboard",
+  "name": "kanban",
   "version": "1.0.0",
-  "description": "ex01 : Property",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --progress --mode development",
+    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development",
     "build": "npx webpack"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
+    "@babel/core": "^7.17.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
@@ -27,5 +27,5 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "keywords": []
+  "description": ""
 }

@@ -1,17 +1,24 @@
-import React from 'react'
-import styles from './assets/scss/Card.scss';
+import React, {useState} from 'react'
+import styles from './assets/css/Card.css';
 import TaskList from './TaskList';
 
+
 const Card = ({title, description, tasks}) => {
+  const[foldStatus,setFoldStatus] = useState(false);
+  const onChangeFold = function(e){
+    setFoldStatus(e => e?false:true);
+}
   return (
     <div className={styles.Card}>
-        <div className={styles.Card__Title}>{title}</div>
-        <div className={styles.Card__Details}>
+          <div className={styles.Card__Title}
+               value={foldStatus}
+               onClick={onChangeFold}>{title}</div>
+          <div className={styles.Card__Details}>
             {description}
-            <TaskList tasks={tasks} />
+            {foldStatus ? <TaskList tasks={tasks}/> : null}
+          </div>
         </div>
-    </div>
   )
 }
 
-export default Card;
+export default Card
