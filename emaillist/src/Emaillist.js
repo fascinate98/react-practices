@@ -1,41 +1,16 @@
 import React from 'react'
 import styles from "./assets/scss/Emaillist.scss";
+import Email from './Email';
 
-const Emaillist = () => {
-  return (
-    <ul className={styles.Emaillist}>
-    <li>
-        둘리
-        <br/>
-        dooly@gmail.com
-    </li>
-    <li>
-        마이콜
-        <br/>
-        michol@gmail.com
-    </li>
-    <li>
-        도우너
-        <br/>
-        douner@gmail.com
-    </li>
-    <li>
-        또치
-        <br/>
-        ddochi@gmail.com
-    </li>
-    <li>
-        도우너
-        <br/>
-        douner@gmail.com
-    </li>
-    <li>
-        또치
-        <br/>
-        ddochi@gmail.com
-    </li>                
-</ul>
-  )
-}
+
+const Emaillist = ({emails}) => {
+    return (
+      <ul className={styles.Emaillist}>
+          {
+             emails.map(e => <Email email = {e}/>)
+          }
+      </ul>
+    )
+  }
 
 export default Emaillist
