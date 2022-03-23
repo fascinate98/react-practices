@@ -14,7 +14,7 @@ ex05: Component Lifecycle
 
 ex06: immutability(불변성) of Component's State 
 
-AJAX: XMLHttpRequest, $.ajax fetch(ES6 표준), axios
+AJAX:  fetch(ES6 표준), axios
 
 kanbanboard
 emaillist

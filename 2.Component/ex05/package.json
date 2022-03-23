@@ -1,10 +1,11 @@
 {
   "name": "ex05",
   "version": "1.0.0",
-  "description": "ex05: Component - lifecycle",
+  "description": "ex05: Component - Lifecycle",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development --env",
+    "build": "npx webpack"
   },
   "keywords": [],
   "author": "",
