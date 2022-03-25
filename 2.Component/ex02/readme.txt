@@ -13,7 +13,6 @@ ex02 : Component Styling (Working with UI)
   ----------------------------------------------------
 06. Font Awesome : Working with UI I
 07. React Modal : Working with UI II
-08. 
 
 1. 설치
   $ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader sass-loader @babel/core @babel/cli @babel/preset-env @babel/preset-react babel-loader
