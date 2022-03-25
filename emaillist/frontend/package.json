@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:frontend && npm run build:backend",
-    "build:frontend": "npx webpack --config config/webpack.config.js --mode production", 
+    "build:frontend": "npx webpack --config config/webpack.config.js --mode production",
     "build:backend": "cd ../backend && mvn clean package",
     "dev": "",
     "dev:frontend": "npx webpack serve --config config/webpack.config.js --progress --mode development",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.8",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
