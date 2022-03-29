@@ -5,11 +5,11 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
 	<typeAliases>
-		<typeAlias type="com.example.demo.vo.CardlistVo" alias="cardlistvo" />
-		<typeAlias type="com.example.demo.vo.TasklistVo" alias="tasklistvo" />
+		<typeAlias type="com.example.demo.vo.CardVo" alias="cardvo" />
+		<typeAlias type="com.example.demo.vo.TaskVo" alias="taskvo" />
 	</typeAliases>
 	<mappers>
-		<mapper resource="mybatis/mappers/cardlist.xml" />
-		<mapper resource="mybatis/mappers/tasklist.xml" />
+		<mapper resource="mybatis/mappers/card.xml" />
+		<mapper resource="mybatis/mappers/task.xml" />
 	</mappers>
 </configuration>

@@ -6,14 +6,14 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.vo.TasklistVo;
+import com.example.demo.vo.CardVo;
 
 @Repository
-public class TasklistRepository {
+public class CardRepository {
 	@Autowired
 	private SqlSession sqlSession;
 	
-	public List<TasklistVo> findAll(String keyword) {
-		return sqlSession.selectList("tasklist.findAll", keyword);
+	public List<CardVo> findAll() {
+		return sqlSession.selectList("card.findAll");
 	}
 }

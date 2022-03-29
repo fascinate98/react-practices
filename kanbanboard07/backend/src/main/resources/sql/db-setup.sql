@@ -1,4 +1,6 @@
 -- create table
+use webdb;
+
 
 CREATE TABLE IF NOT EXISTS `card` (
   `no` INT NOT NULL AUTO_INCREMENT,
@@ -37,4 +39,5 @@ insert into task values(null, 'bootstarp 테마 찾기', 'N', 4);
 insert into task values(null, '스토리 보드 화면에 맞게 수정', 'N', 4);
 
 
-
+select * from task where no= 1 order by no desc;
+            
